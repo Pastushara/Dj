@@ -1,0 +1,691 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Poppins;
+	font-size: 16px;
+	color: white;
+}
+body {
+	background: #1C1B21;
+}
+h1 {
+	font-size: 80px;
+	-webkit-text-fill-color: transparent;
+	-webkit-text-stroke: 0.01em white;
+}
+h2 {
+	font-size: 35px
+}
+h3 {
+	font-size: 20px
+}
+ul {
+	list-style-type: none;
+}
+
+$primary-color: #7A66CC;
+
+%play {
+	height: 40px;
+	padding-right: 20px;
+}
+
+%flex {
+	display: flex;
+	flex-direction: column;
+}
+
+%inner {
+	max-width: 1100px;
+    margin: 0 auto;
+}
+
+.welcome {
+	background: url(img/first.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+
+    &__inner {
+    	@extend %inner;
+    	position: relative;
+    }
+
+	&__menu {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__list {
+		display: flex;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	&__item {
+		padding: 15px 25px;
+	}
+
+	&__description {
+		padding: 180px 100px;
+	}
+
+	&__block {
+		position: absolute;
+		z-index: 10;
+		bottom: -120px;
+		left: 130px;
+	}
+
+	&__slider {
+		display: flex;
+	}
+
+	&__card {
+		position: relative;
+		width: 235px;
+		height: 200px;
+		padding: 160px 0 0;
+		margin: 20px;
+		// max-width: 350px;
+
+		&_left {
+			background: url(img/card1.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&_center {
+			background: url(img/card2.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&_right {
+			background: url(img/card3.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
+
+	&__text {
+			bottom: 0;
+			padding: 15px 10px;
+			font-size: 14px;
+			background: rgba(122, 102, 204, 0.5);
+			border-radius: 12px 0;
+			display: block;
+			vertical-align: super;
+    }
+
+    &__text:hover {
+    	background: hsla(252, 50%, 60%, 1);
+    	transition: 0.5s;
+    }
+	
+}
+
+.about {
+
+	&__inner {
+	display: flex;
+	flex-wrap: wrap;
+	@extend %inner;
+	padding-top: 200px;
+    }
+
+	&__description {
+		width: 46%;
+		padding: 0 20px 50px 100px;
+
+	}
+
+	&__title {
+		display: flex;
+		padding-bottom: 25px;
+
+	}
+
+	&__play {
+		@extend %play;
+	}
+
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+
+	&__item {
+		padding: 20px 0 0 0;
+		width: 250px;
+		display: flex;
+
+	}
+
+	&__itemImg {
+		padding-right: 20px;
+	}
+	
+	
+
+	&__pictureImg {
+		width: 80%;
+		padding: 75px 14px;
+	}
+}
+
+.news {
+	background: #1C1B21;
+
+	&__inner {
+		@extend %inner;
+	    position: relative;
+	    padding-top: 150px
+	}
+
+	&__block {
+		position: relative;
+	}
+
+	&__description {
+		@extend %flex;
+		margin: 0 auto;
+		padding: 32px 470px 32px 50px;
+		border: 1px solid white;
+		border-radius: 30px 0px;
+		width: 34%;
+	}
+
+	&__line {
+		width: 450px;
+		border: none;
+		border-bottom: 1px solid white;
+		padding: 10px 0;
+	}
+
+	&__link {
+		color: $primary-color;
+		padding: 10px 0 0 0;
+		text-decoration: none;
+	}
+	
+	&__quote {
+		position: absolute;
+		bottom: 118px;
+		left: 156px;
+	}
+	&__img {
+		position: absolute;
+		right: 130px;
+		top: 30px;
+	}
+}
+
+.music {
+	background: #1C1B21;
+	justify-content: center;
+
+	&__inner {
+		@extend %inner;
+		display: flex;
+		align-items: center;
+        padding: 250px 0 150px 0;
+	}
+
+	&__img {
+		width: 80%;
+		padding: 20px;
+	}
+
+	&__description {
+		@extend %flex;
+		line-height: 38px;
+	}
+
+	&__title {
+		display: flex;
+	}
+
+	&__play {
+		@extend %play;
+	}
+
+
+	&__follow {
+		display: flex;
+		padding: 30px 0;
+	}
+
+	&__followImg {
+		padding: 0 10px 0 20px;
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+}
+
+.media {
+
+	&__inner {
+		@extend %inner;
+		display: flex;
+	}
+
+	&__middleBlock {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 550px;
+		justify-content: center;
+	}
+
+	&__block {
+		margin: 10px;
+		position: relative;
+		display: flex;
+        align-items: center;
+        justify-content: center;
+
+		&_1 {
+			background: url(img/media1.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 275px;
+			height: 520px;
+		}
+		&_2 {
+			background: url(img/media2.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 250px;
+			height: 250px;
+		}
+		&_3 {
+			background: url(img/media3.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 250px;
+			height: 250px;
+		}
+		&_4 {
+			background: url(img/media4.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 540px;
+			height: 250px;
+		}
+		&_5 {
+			background: url(img/media5.png);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 275px;
+			height: 520px;
+		}
+	}
+
+	&__text {
+		color: $primary-color;
+		font-weight: 600;
+		font-size: 22px;
+        display: none;
+        z-index: 2;
+	}
+	&__block:hover .media__opacity {
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		position: absolute;
+		background: rgba(0,0,0,0.6);
+	}
+	&__block:hover .media__text {
+		display: block;
+		transition: 0.2s;
+	}
+}
+
+.tours {
+
+	&__inner {
+		@extend %inner;
+		display: flex;
+	    padding: 200px 0;
+	}
+
+	&__card {
+		padding: 10px;
+	}
+
+	&__picture {
+		margin: -31px 0px;
+		z-index: 200;
+		position: relative;
+	}
+	.slick-slide img {
+		display: block;
+		width: 100%;
+	}
+
+	&__description {
+		@extend %flex;
+		background: #2F2B2B;
+		border-radius: 30px 0;
+		padding-top: 28px;
+		position: relative;
+
+		p {
+			padding: 20px 20px 10px;
+		}
+
+		&_gray {
+			color: #979595FF;
+		}
+
+	}
+
+	&__link {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 30%;
+		height: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: $primary-color;
+		border-radius: 30px 0;
+		text-decoration: none;
+	}
+	&__link:hover {
+		width: 100%;
+		height: 100%;
+		transition: 0.5s;
+	}
+}
+
+.contacts {
+	background: #1C1B21;
+	@extend %flex;
+	align-items: center;
+
+	&__description {
+		padding-top: 50px;
+		display: flex;
+
+		&_bold {
+			font-weight: 600;
+			text-align: end;
+			padding-right: 25px;
+		}
+	}
+
+	&__links {
+		display: flex;
+		align-items: center;
+
+	}
+
+	&__vector {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 80px 40px;
+
+		&_big {
+			border-radius: 30px;
+			background: #2C2C2C;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+		}
+
+		&_small {
+			border-radius: 20px;
+			background: $primary-color;
+			width: 38px;
+			height: 38px;
+			position: absolute;
+		}
+	}
+
+	&__vector:hover .contacts__vector_small {
+		border-radius: 30px;
+		width: 50px;
+		height: 50px;
+		transition: 0.5s;
+	}
+
+	&__network {
+		position: absolute;
+		display: flex;
+	}
+
+	&__text {
+		font-size: 12px;
+		color: #979595FF;
+		text-align: center;
+		padding-bottom: 30px;
+	}
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 18px;
+}
+
+.nav_grey:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+@media (min-width: 430px) {
+	.topnav {
+		display: none;
+	}
+}
+
+@media (max-width: 1024px) {
+
+	%inner {
+	max-width: 990px;
+    margin: 0 auto;
+    }
+
+	.welcome__block {
+		left: auto;
+    width: auto;
+	}
+
+	.about__description {
+		width: 40%;
+	}
+	.news__description {
+		padding: 34px 410px 32px 50px;
+	}
+	.music__inner {
+		padding: 232px 102px 150px;
+	}
+	.tours {
+		flex-wrap: wrap;
+	}
+	.tours__card {
+    padding: 20px;
+    }
+	.tours__picture {
+		margin: -20px 0;
+	}
+}
+
+@media (max-width: 900px) {
+
+    .about__description {
+		width: 90%;
+	}
+	.about__picture {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+
+	%inner {
+		max-width: 620px;
+		margin: 0 auto;
+	}
+	.welcome__card_center, .welcome__card_left, .welcome__card_right {
+		max-width: 350px;
+	}
+
+	.welcome__description {
+		padding: 130px 0px;
+	}
+
+	.welcome__item {
+		padding: 17px 10px;
+	}
+
+	.about__inner {
+		padding-top: 200px;
+	} 
+
+	.about__description {
+		padding: 0
+	}
+	.news__quote {
+		left: 39px;
+		top: 22px;
+	}
+	.news__description {
+		padding: 32px 400px 32px 50px;
+	}
+	.news__img {
+		right: 0px;
+		width: 50%;
+		top: 100px;
+	}
+	.news__line {
+		width: 90%;
+	}
+	
+	.music__inner {
+		padding: 150px 0;
+	}
+	.music__picture {
+		order: 2;
+		width: 50%;
+	}
+	.media__inner {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.media__middleBlock {
+		order: -1;
+	}
+	.welcome__card {
+		position: relative;
+		width: 235px;
+		height: 200px;
+		padding: 160px 0 0;
+		margin: 20px;
+		max-width: 350px;
+	}
+}
+
+@media (max-width: 425px) {
+	%inner {
+		max-width: 320px;
+		margin: 0 auto;
+	}
+	p {
+		font-size: 14px;
+	}
+	img {
+		max-width: 100%;
+	}
+	h1 {
+		font-size: 55px
+	}
+	h2 {
+		font-size: 30px
+	}
+	.welcome {
+		background-position: 27%;
+	}
+	.welcome__description {
+		padding: 100px 0;
+	}
+	.welcome__list li {
+		display: none;
+	}
+
+	.welcome__img {
+		width: 100%;
+	}
+
+	.about__inner {
+		padding-top: 100px;
+	}
+	.news__inner {
+		padding-top: 100px;
+	}
+	
+	.news__description {
+		padding: 10px;
+		width: 90%;
+	}
+	.news__img {
+		position: relative;
+		width: 100%;
+	}
+	.music__inner {
+		padding: 200px 0 100px 0;
+	}
+
+	.music__picture {
+		display: none;
+	}
+	.media__middleBlock {
+		flex-wrap: wrap;
+		width: 80%;
+	}
+	.media__text {
+		right: 45px;
+		font-size: 16px;
+	}
+	.tours {
+		padding: 0;
+	}
+	.contacts__description_bold {
+		padding-right: 0;
+	}
+	.contacts__vector {
+		padding: 80px 27px;
+	}
+}
